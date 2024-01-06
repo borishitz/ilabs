@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div th:fragment ="dash-header">
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" th:href="@{/dashboard/dashboard.css}">
+        </head>
+        <body>
+
+                <div class="header">
+                    <div id="logo">
+                        <a href="index.html" class="standard-logo" data-dark-logo="assest/images/logo/logo-dark.png"><img width="150px" th:src="@{/assest/images/logo/logo.png}" alt="Logo" /></a>
+                    </div>
+                    <div class="dash-menu">
+                        <h4><a class="linkin" th:href="@{/logout}">Logout</a></h4>
+                    </div>
+                </div>
+        </body>
+    </div>
+</html>

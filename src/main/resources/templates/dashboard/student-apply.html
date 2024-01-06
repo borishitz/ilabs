@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<div th:replace="dash-header :: dash-header"></div>
+
+<div class="row">
+  <div th:replace="dash-menu :: dash-menu"></div>
+
+  <div class="col-10">
+    <div class="content">
+
+      <!--           start of table section -->
+      <h3>Student Application Entries</h3>
+      <table id="customers">
+        <tr>
+          <th>Names</th>
+          <th>Email</th>
+          <th>Phone</th>
+        </tr>
+        <tr th:each="apply : ${studentApplications}">
+          <td th:text="${contact.studentNames}"> Alfreds Futterkiste</td>
+          <td th:text="${contact.email}">Maria Anders</td>
+          <td th:text="${contact.telephoneNumber}">Germany</td>
+        </tr>
+
+      </table>
+      <!--           end of table section -->
+    </div>
+  </div>
+
+</div>
+
+<div th:replace="dash-footer :: dash-footer"></div>
+
+</body>
+</html>

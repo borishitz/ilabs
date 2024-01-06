@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:fragment="header">
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Edustar - Education & Online Courses HTML Template</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="shortcut icon" type="image/x-icon" th:href="@{assest/images/favicon.png}">
+        <!-- CSS here -->
+        <link rel="stylesheet" th:href="@{assest/css/awafonts/css/all.css}">
+        <link rel="stylesheet" th:href="@{assest/css/bootstrap.min.css}">
+        <link rel="stylesheet" th:href="@{assest/css/animate.min.css}">
+        <link rel="stylesheet" th:href="@{assest/css/backToTop.css}">
+        <link rel="stylesheet" th:href="@{assest/css/magnific-popup.css}">
+        <link rel="stylesheet" th:href="@{assest/css/slick.css}">
+        <link rel="stylesheet" th:href="@{assest/css/slick-theme.css}">
+        <link rel="stylesheet" th:href="@{assest/css/jquery.webui-popover.min.css}">
+        <link rel="stylesheet" th:href="@{assest/css/default.css}">
+        <link rel="stylesheet" th:href="@{assest/css/style.css}">
+        <link rel="stylesheet" th:href="@{assest/css/font-icons.css}">
+        <link th:href="@{https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:400,400i&display=swap}" rel="stylesheet" type="text/css" />
+    </head>
+<body>
+<!-- header note area start  -->
+<div th:fragment="promo_banner" class="header-note-area p-relative d-none d-md-block">
+        <div class="container-fluid">
+                <div class="note-text text-center">
+                        <p><span>Accelerating Tech With Confidence</span>.</p>
+                </div>
+        </div>
+        <div class="header-notice-action-close">
+                <button><i class="icon-line-cross"></i></button>
+        </div>
+</div>
+<!-- header note area end -->
+
+<header th:fragment="menu" id="header" class="full-header">
+        <div id="header-wrap">
+                <div class="container">
+                        <div class="header-row">
+                                <!-- Logo
+                              ============================================= -->
+                                <div id="logo">
+                                        <a href="index.html" class="standard-logo" data-dark-logo="assest/images/logo/header/logo-dark.png"><img src="assest/images/logo/header/logo.png" alt="Logo" /></a>
+                                        <a href="index.html" class="retina-logo" data-dark-logo="assest/images/logo/header/logo-dark@2x.png"><img src="assest/images/logo/header/logo@2x.png" alt="Logo" /></a>
+                                </div>
+                                <!-- #logo end -->
+
+                                <div class="header-misc">
+                                        <!-- Top Search
+                                     ============================================= -->
+                                        <div id="top-search" class="header-misc-icon">
+                                                <a href="#" id="top-search-trigger"><i class="icon-line-search"></i><i class="icon-line-cross"></i></a>
+                                        </div>
+                                        <!-- #top-search end -->
+
+                                        <!-- Top Cart
+                                     ============================================= -->
+                                        <div id="top-cart" class="header-misc-icon d-none d-sm-block">
+                                                <a href="#" id="top-cart-trigger"><i class="icon-line-bag"></i><span class="top-cart-number">5</span></a>
+                                                <div class="top-cart-content">
+                                                        <div class="top-cart-title">
+                                                                <h4>Shopping Cart</h4>
+                                                        </div>
+                                                        <div class="top-cart-items">
+                                                                <div class="top-cart-item">
+                                                                        <div class="top-cart-item-image">
+                                                                                <a href="#"><img src="assest/images/shop/small/1.jpg" alt="Blue Round-Neck Tshirt" /></a>
+                                                                        </div>
+                                                                        <div class="top-cart-item-desc">
+                                                                                <div class="top-cart-item-desc-title">
+                                                                                        <a href="#">Blue Round-Neck Tshirt with a Button</a>
+                                                                                        <span class="top-cart-item-price d-block">$19.99</span>
+                                                                                </div>
+                                                                                <div class="top-cart-item-quantity">x 2</div>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="top-cart-item">
+                                                                        <div class="top-cart-item-image">
+                                                                                <a href="#"><img src="assest/images/shop/small/2.jpg" alt="Light Blue Denim Dress" /></a>
+                                                                        </div>
+                                                                        <div class="top-cart-item-desc">
+                                                                                <div class="top-cart-item-desc-title">
+                                                                                        <a href="#">Light Blue Denim Dress</a>
+                                                                                        <span class="top-cart-item-price d-block">$24.99</span>
+                                                                                </div>
+                                                                                <div class="top-cart-item-quantity">x 3</div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                        <div class="top-cart-action">
+                                                                <span class="top-checkout-price">$114.95</span>
+                                                                <a href="#" class="button button-3d button-small m-0">View Cart</a>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <!-- #top-cart end -->
+                                </div>
+
+                                <div id="primary-menu-trigger">
+                                        <svg class="svg-trigger" viewBox="0 0 100 100">
+                                                <path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path>
+                                                <path d="m 30,50 h 40"></path>
+                                                <path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path>
+                                        </svg>
+                                </div>
+
+                                <!-- Primary Navigation
+                              ============================================= -->
+                                <nav class="primary-menu">
+                                        <ul class="menu-container">
+                                                <li class="menu-item">
+                                                        <a class="menu-link" href="index.html"><div>Home</div></a>
+                                                </li>
+                                                <li class="menu-item">
+                                                        <a class="menu-link" href=""><div>Courses</div></a>
+                                                        <ul class="sub-menu-container">
+                                                                <li class="menu-item">
+                                                                        <a class="menu-link" href="course.html"><div>Course</div></a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                        <a class="menu-link" href="course-details.html"><div>Course Details</div></a>
+                                                                </li>
+                                                        </ul>
+                                                </li>
+                                                <li class="menu-item">
+                                                        <a class="menu-link" href="#"><div>Pages</div></a>
+                                                        <ul class="sub-menu-container">
+                                                                <li class="menu-item">
+                                                                        <a class="menu-link" href="about.html"><div>About</div></a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                        <a class="menu-link" href="instructor.html"><div>Instructor</div></a>
+                                                                        <ul class="sub-menu-container">
+                                                                                <li class="menu-item">
+                                                                                        <a class="menu-link" href="instructor.html"><div>Instructor</div></a>
+                                                                                </li>
+                                                                                <li class="menu-item">
+                                                                                        <a class="menu-link" href="instructor-profile.html"><div>Instructor Profile</div></a>
+                                                                                </li>
+                                                                                <li class="menu-item">
+                                                                                        <a class="menu-link" href="become-instructor.html"><div>Become Instructor</div></a>
+                                                                                </li>
+                                                                        </ul>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>Event</div></a>
+                                                                        <ul class="sub-menu-container">
+                                                                                <li class="menu-item">
+                                                                                        <a class="menu-link" href="event.html"><div>Event</div></a>
+                                                                                </li>
+                                                                                <li class="menu-item">
+                                                                                        <a class="menu-link" href="event-details.html"><div>Event Details</div></a>
+                                                                                </li>
+                                                                        </ul>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                        <a class="menu-link" href="faq-page.html"><div>FAQ Page</div></a>
+                                                                        <ul class="sub-menu-container">
+                                                                                <li class="menu-item">
+                                                                                        <a class="menu-link" href="faq-page.html"><div>FAQ Page</div></a>
+                                                                                </li>
+                                                                                <li class="menu-item">
+                                                                                        <a class="menu-link" href="faq-details.html"><div>FAQ Details</div></a>
+                                                                                </li>
+                                                                        </ul>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                        <a class="menu-link" href="404-page.html"><div>404 Page</div></a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                        <a class="menu-link" href="login.html"><div>Login</div></a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                        <a class="menu-link" href="register.html"><div>Sign Up</div></a>
+                                                                </li>
+                                                        </ul>
+                                                </li>
+                                                <li class="menu-item">
+                                                        <a class="menu-link" href="#"><div>Blog</div></a>
+                                                        <ul class="sub-menu-container">
+                                                                <li class="menu-item">
+                                                                        <a class="menu-link" href="blog.html"><div>Blog</div></a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                        <a class="menu-link" href="blog-details.html"><div>Blog Details</div></a>
+                                                                </li>
+                                                        </ul>
+                                                </li>
+                                                <li class="menu-item">
+                                                        <a class="menu-link" href="shop.html"><div>Shop</div></a>
+                                                        <ul class="sub-menu-container">
+                                                                <li class="menu-item">
+                                                                        <a class="menu-link" href="shop.html"><div>Shop</div></a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                        <a class="menu-link" href="shop-details.html"><div>Shop Details</div></a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                        <a class="menu-link" href="wishlist.html"><div>Wishlist</div></a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                        <a class="menu-link" href="cart.html"><div>Cart</div></a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                        <a class="menu-link" href="checkout.html"><div>Checkout</div></a>
+                                                                </li>
+                                                        </ul>
+                                                </li>
+                                                <li class="menu-item">
+                                                        <a class="menu-link" href="contact.html"><div>Contact</div></a>
+                                                </li>
+                                        </ul>
+                                </nav>
+                                <!-- #primary-menu end -->
+
+                                <form class="top-search-form" action="search.html" method="get">
+                                        <input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter.." autocomplete="off" />
+                                </form>
+                        </div>
+                </div>
+        </div>
+        <div class="header-wrap-clone"></div>
+</header>
+
+
+</body>
+</html>

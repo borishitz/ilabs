@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div th:fragment ="header">
+        <head>
+            <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-TX1WY12MP4"></script>
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-TX1WY12MP4');
+            </script>
+            <meta charset="utf-8">
+            <meta http-equiv="x-ua-compatible" content="ie=edge">
+            <title>BitsvalleyiLabs</title>
+            <meta name="description" content="">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <!-- Place favicon.ico in the root directory -->
+            <link rel="shortcut icon" type="image/x-icon" th:href="@{/assest/images/favicon.png}">
+
+            <!-- CSS here -->
+
+            <link rel="stylesheet" href="style.css" />
+            <script src="https://kit.fontawesome.com/1cf483120b.js" crossorigin="anonymous"></script>
+            <link rel="stylesheet" th:href="@{/assest/css/awafonts/css/all.css}">
+            <link rel="stylesheet" th:href="@{/assest/css/bootstrap.min.css}">
+            <link rel="stylesheet" th:href="@{/assest/css/animate.min.css}">
+            <link rel="stylesheet" th:href="@{/assest/css/backToTop.css}">
+            <link rel="stylesheet" th:href="@{/assest/css/magnific-popup.css}">
+            <link rel="stylesheet" th:href="@{/assest/css/slick.css}">
+            <link rel="stylesheet" th:href="@{/assest/css/slick-theme.css}">
+            <link rel="stylesheet" th:href="@{/assest/css/jquery.webui-popover.min.css}">
+            <link rel="stylesheet" th:href="@{/assest/css/default.css}">
+            <link rel="stylesheet" th:href="@{/assest/css/style.css}">
+            <link rel="stylesheet" th:href="@{/assest/css/font-icons.css}">
+            <link th:href="@{https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:400,400i&display=swap}" rel="stylesheet" type="text/css" />
+        </head>
+        <body class="stretched">
+    <!-- Document Wrapper
+       ============================================= -->
+
+    <div id="wrapper" class="clearfix">
+        <!-- header note area start  -->
+        <div class="header-note-area p-relative d-none d-md-block">
+            <div class="container-fluid">
+                <div class="note-text text-center" style="display:flex; color: white;">
+                    <p><span>Accelerating Tech With Confidence</span>.</p>
+                    <a th:href="@{?lang=en}">
+                        <div style="display:flex; margin: 0 20px;">
+                            <img class="langstyle" th:src="@{/assest/images/flags/en.png}">
+                            <span> English</span>
+                        </div>
+                    </a>
+                    <a th:href="@{?lang=fr}">
+                        <div class="lang" style="display:flex; margin: 0 20px;" >
+                            <img class="langstyle" th:src="@{/assest/images/flags/fr.png}">
+                            <span> French</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="header-notice-action-close">
+                <button><i class="icon-line-cross"></i></button>
+            </div>
+        </div>
+        <!-- header note area end -->
+
+        <!-- header area start -->
+        <header id="header" class="full-header">
+            <div id="header-wrap">
+                <div class="container">
+                    <div class="header-row">
+                        <!-- Logo
+                      ============================================= -->
+                        <div id="logo">
+                            <a href="index.html" class="standard-logo" data-dark-logo="assest/images/logo/logo-dark.png"><img src="assest/images/logo/logo.png" alt="Logo" /></a>
+                            <a href="index.html" class="retina-logo" data-dark-logo="assest/images/logo/logo-dark@2x.png"><img src="assest/images/logo/logo.png" alt="Logo" /></a>
+                        </div>
+                        <!-- #logo end -->
+
+                        <div class="header-misc">
+                            <!-- Top Search
+                         ============================================= -->
+                            <div id="top-search" class="header-misc-icon">
+                                <a th:href="@{/login}"><p>Login</p></a>
+                            </div>
+                            <!-- #top-search end -->
+
+                            <!-- Top Cart
+                         ============================================= -->
+                        </div>
+
+                        <div id="primary-menu-trigger">
+                            <svg class="svg-trigger" viewBox="0 0 100 100">
+                                <path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path>
+                                <path d="m 30,50 h 40"></path>
+                                <path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path>
+                            </svg>
+                        </div>
+
+                        <!-- Primary Navigation ============================================= -->
+                        <nav class="primary-menu">
+                            <ul class="menu-container">
+                                <li class="menu-item">
+                                    <a class="menu-link" th:href="@{/}"><div>[[#{menu.home}]]</div></a>
+                                </li>
+
+                                <li class="menu-item">
+                                    <a class="menu-link" th:href="@{/course}"><div>[[#{menu.courses}]]</div></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class="menu-link" th:href="@{/about}"><div>[[#{menu.about}]]</div></a>
+                                </li>
+
+                                <li class="menu-item">
+                                    <a class="menu-link" th:href="@{/blog}"><div>[[#{menu.blog}]]</div></a>
+                                </li>
+
+                                <li class="menu-item">
+                                    <a class="menu-link" th:href="@{/checkout}"><div>[[#{menu.createFlyer}]]</div></a>
+                                </li>
+
+                                <li class="menu-item">
+                                    <a class="menu-link" th:href="@{/application}"><div>[[#{menu.studentApplication}]]</div></a>
+                                </li>
+
+                                <li class="menu-item">
+                                    <a class="menu-link" th:href="@{/contact}"><div>[[#{menu.contact}]]</div></a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <!-- #primary-menu end -->
+                    </div>
+                </div>
+            </div>
+            <div class="header-wrap-clone"></div>
+        </header >
+
+        <!-- header area end -->
+
+    </div>
+    </body>
+    </div>
+</html>

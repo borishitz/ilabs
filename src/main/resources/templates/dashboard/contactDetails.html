@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<div th:replace="dash-header :: dash-header"></div>
+
+<div class="row">
+    <div th:replace="dash-menu :: dash-menu"></div>
+
+    <div class="col-10">
+        <div class="content">
+            <!--           start of table section         -->
+            <h3>Detailed Message</h3>
+            <table class="table">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="row">Name</th>
+                        <th scope="row">Web Site Link</th>
+                        <th scope="row">Phone</th>
+                        <th scope="row">Email</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    <tr>
+                        <td colspan="2" th:text="${contactDetail.name}"></td>
+                        <td colspan="2" th:text="${contactDetail.webSiteUrl}"></td>
+                        <td colspan="2" th:text="${contactDetail.phone}"></td>
+                        <td colspan="2" th:text="${contactDetail.email}"></td>
+                    </tr>
+                    <tr style="padding: 20px 0;">
+                        <th>Message</th>
+                        <td th:text="${contactDetail.details}"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <!--            end of table section            -->
+        </div>
+    </div>
+
+</div>
+
+<div th:replace="dash-footer :: dash-footer"></div>
+
+</body>
+</html>

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <style>
+       .stretch-card>.card {
+       width: 100%;
+       min-width: 100%
+       }
+
+       body {
+           background-color: #f9f9fa
+       }
+
+       .flex {
+           -webkit-box-flex: 1;
+           -ms-flex: 1 1 auto;
+           flex: 1 1 auto
+       }
+
+       @media (max-width:991.98px) {
+           .padding {
+               padding: 1.5rem
+           }
+       }
+
+       @media (max-width:767.98px) {
+           .padding {
+               padding: 1rem
+           }
+       }
+
+       .padding {
+           padding: 3rem
+       }
+
+       .card {
+           box-shadow: none;
+           -webkit-box-shadow: none;
+           -moz-box-shadow: none;
+           -ms-box-shadow: none
+       }
+
+       .card {
+           position: relative;
+           display: flex;
+           flex-direction: column;
+           min-width: 0;
+           word-wrap: break-word;
+           background-color: #fff;
+           background-clip: border-box;
+           border: 1px solid #3da5f;
+           border-radius: 0
+       }
+
+       .card .card-body {
+           padding: 1.25rem 1.75rem
+       }
+
+       .card .card-title {
+           color: #000000;
+           margin-bottom: 0.625rem;
+           text-transform: capitalize;
+           font-size: 0.875rem;
+           font-weight: 500
+       }
+
+       .card .card-description {
+           margin-bottom: .875rem;
+           font-weight: 400;
+           color: #76838f
+       }
+      .btn.btn-social-icon{
+          width: 50px;
+          height: 50px;
+          padding: 0;
+      }
+      .template-demo > .btn{
+          margin-right: 0.5rem !important;
+      }
+
+      .template-demo{
+          margin-top: 0.5rem !important;
+      }
+
+      .btn.btn-rounded {
+          border-radius: 50px;
+      }
+
+
+      .btn-outline-facebook {
+          border: 1px solid #3b579d;
+          color: #3b579d;
+      }
+
+      .btn-outline-facebook:hover {
+          background: #3b579d;
+          color: #ffffff;
+      }
+
+      .btn-outline-youtube {
+          border: 1px solid #e52d27;
+          color: #e52d27;
+      }
+
+      .btn-outline-twitter {
+          border: 1px solid #2caae1;
+          color: #2caae1;
+      }
+
+      .btn-outline-dribbble {
+          border: 1px solid #ea4c89;
+          color: #ea4c89;
+      }
+
+      .btn-outline-linkedin {
+          border: 1px solid #0177b5;
+          color: #0177b5;
+      }
+
+      .btn-outline-instagram {
+          border: 1px solid #dc4a38;
+          color: #dc4a38;
+      }
+
+      .btn-outline-twitter:hover {
+          background: #2caae1;
+          color: #ffffff;
+      }
+
+      .btn-outline-linkedin:hover {
+          background: #0177b5;
+          color: #ffffff;
+      }
+
+      .btn-outline-youtube:hover {
+          background: #e52d27;
+          color: #ffffff;
+      }
+
+      .btn-outline-instagram:hover{
+          background: #e52d27;
+          color: #ffffff;
+      }
+
+
+      /*Button cover*/
+
+      .btn-facebook {
+          background: #3b579d;
+          color: #ffffff;
+      }
+
+      .btn-youtube {
+          background: #e52d27;
+          color: #ffffff;
+      }
+
+      .btn-twitter {
+          background: #2caae1;
+          color: #ffffff;
+      }
+      .btn-dribbble {
+          background: #ea4c89;
+          color: #ffffff;
+      }
+      .btn-linkedin {
+          background: #0177b5;
+          color: #ffffff;
+      }
+      .btn-instagram {
+          background: #dc4a38;
+          color: #ffffff;
+      }
+
+      .btn-facebook:hover, .btn-facebook:focus {
+          background: #2d4278;
+          color: #ffffff;
+      }
+
+      .btn-youtube:hover, .btn-youtube:focus {
+          background: #c21d17;
+          color: #ffffff;
+      }
+      .btn-twitter:hover, .btn-twitter:focus {
+          background: #1b8dbf;
+          color: #ffffff;
+      }
+      .btn-dribbble:hover, .btn-dribbble:focus {
+          background: #e51e6b;
+          color: #ffffff;
+      }
+
+      .btn-linkedin:hover, .btn-linkedin:focus {
+          background: #015682;
+          color: #ffffff;
+      }
+
+      .btn-instagram:hover, .btn-instagram:focus {
+          background: #bf3322;
+          color: #ffffff;
+      }
+  </style>
+</head>
+<div th:fragment="footer">
+<!-- footer-area-start -->
+<footer>
+  <div class="footer-area pt-100">
+    <div class="container">
+      <div class="footer-main mb-60">
+        <div class="row">
+          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+            <div class="footer-widget f-w1 mb-40">
+              <div class="footer-img">
+                <a href="index.html"> <img style="width:150px" src="assest/images/logo/logowhite.png" alt="footer-logo" /></a>
+                <p>[[#{Top-notch.IT}]]</p>
+              </div>
+              <div class="footer-icon">
+                <a href="https://www.facebook.com/bitsvalleyilabs?mibextid=ZbWKwL"><i class="icon-facebook"></i></a>
+                <a href="https://twitter.com/bitsvalley?s=09"><i class="icon-twitter"></i></a>
+                <a href="https://www.instagram.com/bitsvalley_ilabs"><i class="icon-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/bitsvalley/"> <i class="icon-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+            <div class="footer-widget f-w2 mb-40">
+              <h3>[[#{Quick.Links}]]</h3>
+              <ul>
+                <li><a th:href="@{/}">[[#{menu.home}]]</a></li>
+                <li><a th:href="@{/course}">[[#{menu.courses}]]</a></li>
+                <li><a th:href="@{/about}">[[#{menu.about}]]</a></li>
+                <li><a th:href="@{/blog}">[[#{menu.blog}]]</a></li>
+                <li><a th:href="@{/checkout}">[[#{menu.createFlyer}]]</a></li>
+                <li><a th:href="@{/application}">[[#{menu.studentApplication}]]</a></li>
+                <li><a th:href="@{/contact}">[[#{menu.contact}]]</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+            <div class="footer-widget f-w3 mb-40">
+              <h3>[[#{Browse.Courses}]]</h3>
+              <ul>
+                <li><a th:href="@{/course}">Spring Boot</a></li>
+                <li><a th:href="@{/course}">Cyber Security</a></li>
+                <li><a th:href="@{/course}">Linux/Git</a></li>
+                <li><a th:href="@{/course}">[[#{Python.Programmingin}]]/SQL</a></li>
+                <li><a th:href="@{/course}">[[#{Software.Testing}]]</a></li>
+                <li><a th:href="@{/course}">AWS</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+            <div class="footer-widget f-w4 mb-40">
+              <h3>[[#{Global.Partners}]]</h3>
+              <ul>
+                <li><a th:href="@{/https://iuget.cm/en/}">Uiget</a></li>
+<!--                <li><a href="#">Forum</a></li>-->
+                <li><a th:href="@{/https://fomicgroup.cm/}">fomicgroup</a></li>
+<!--                <li><a href="#">Community</a></li>-->
+<!--                <li><a href="#">[[#{Policies.in}]]</a></li>-->
+                <div class="note-text text-center" style="color: white;">
+                    <a th:href="@{?lang=en}">
+                      <div style="display:flex; margin-bottom: 15px">
+                        <img class="langstyle" th:src="@{/assest/images/flags/en.png}">
+                        <span> English</span>
+                      </div>
+                    </a>
+                    <a th:href="@{?lang=fr}">
+                      <div class="lang" style="display:flex;" >
+                        <img class="langstyle" th:src="@{/assest/images/flags/fr.png}">
+                        <span> French</span>
+                      </div>
+                    </a>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+              <div class="copyright-text border-line">
+                <p>
+                  © [[#{Copyrighted.Designedby}]] <a href="https://www.bitsvalleyilabs.com"><span style="color:#fff">Bitsvalleyilabs</span></a>
+                </p>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-sm-6">
+              <div class="copy-right-support border-line-2">
+                <div class="copy-right-svg">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="43.945" height="50" viewBox="0 0 43.945 50">
+                    <g id="headphones" transform="translate(-31)">
+                      <g id="Group_2171" data-name="Group 2171" transform="translate(36.859 20.508)">
+                        <g id="Group_2170" data-name="Group 2170">
+                          <path
+                                  id="Path_2983"
+                                  data-name="Path 2983"
+                                  d="M95.395,210A4.4,4.4,0,0,0,91,214.395v11.914a4.395,4.395,0,1,0,8.789,0V214.395A4.4,4.4,0,0,0,95.395,210Z"
+                                  transform="translate(-91 -210)"
+                                  fill="#2467ec"
+                          />
+                        </g>
+                      </g>
+                      <g id="Group_2173" data-name="Group 2173" transform="translate(31 23.669)">
+                        <g id="Group_2172" data-name="Group 2172">
+                          <path
+                                  id="Path_2984"
+                                  data-name="Path 2984"
+                                  d="M33.93,243.6a7.268,7.268,0,0,1,.125-1.234A4.386,4.386,0,0,0,31,246.529v6.055a4.386,4.386,0,0,0,3.054,4.163,7.268,7.268,0,0,1-.125-1.234Z"
+                                  transform="translate(-31 -242.366)"
+                                  fill="#2467ec"
+                          />
+                        </g>
+                      </g>
+                      <g id="Group_2175" data-name="Group 2175" transform="translate(48.578 20.508)">
+                        <g id="Group_2174" data-name="Group 2174">
+                          <path
+                                  id="Path_2985"
+                                  data-name="Path 2985"
+                                  d="M227.113,210a4.4,4.4,0,0,0-4.395,4.395v11.914a4.4,4.4,0,0,0,4.395,4.395,4.335,4.335,0,0,0,1.259-.206,4.386,4.386,0,0,1-4.189,3.136h-4.664a4.395,4.395,0,1,0,0,2.93h4.664a7.333,7.333,0,0,0,7.324-7.324V214.395A4.4,4.4,0,0,0,227.113,210Z"
+                                  transform="translate(-211 -210)"
+                                  fill="#2467ec"
+                          />
+                        </g>
+                      </g>
+                      <g id="Group_2177" data-name="Group 2177" transform="translate(71.891 23.669)">
+                        <g id="Group_2176" data-name="Group 2176">
+                          <path
+                                  id="Path_2986"
+                                  data-name="Path 2986"
+                                  d="M449.722,242.366a7.266,7.266,0,0,1,.125,1.234v11.914a7.266,7.266,0,0,1-.125,1.234,4.386,4.386,0,0,0,3.055-4.163v-6.055A4.386,4.386,0,0,0,449.722,242.366Z"
+                                  transform="translate(-449.722 -242.366)"
+                                  fill="#2467ec"
+                          />
+                        </g>
+                      </g>
+                      <g id="Group_2179" data-name="Group 2179" transform="translate(31)">
+                        <g id="Group_2178" data-name="Group 2178">
+                          <path
+                                  id="Path_2987"
+                                  data-name="Path 2987"
+                                  d="M52.973,0A22,22,0,0,0,31,21.973v.037a7.253,7.253,0,0,1,3-1.361,19.02,19.02,0,0,1,37.952,0,7.256,7.256,0,0,1,3,1.361v-.037A22,22,0,0,0,52.973,0Z"
+                                  transform="translate(-31)"
+                                  fill="#2467ec"
+                          />
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+                <div class="copyright-svg-content">
+                  <p>[[#{Havea.questionCall}]]</p>
+                  <h5><a href="tel:(+237)670-533-773">(+237) 670-533-773</a></h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-5 col-lg-5 col-md-12">
+              <div class="copyright-subcribe">
+                <form action="#" class="widget__subscribe">
+                  <div class="field">
+                    <input type="email" placeholder="Enter Email" />
+                  </div>
+                  <button type="submit">Subscribe<i class="icon-paper-plane"></i></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- footer-area-end -->
+
+<!-- #wrapper end -->
+
+<!-- back to top start -->
+<div class="progress-wrap">
+  <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+    <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+  </svg>
+</div>
+<!-- back to top end -->
+
+  <!-- JS here -->
+  <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+  <script th:src="@{/assest/js/vendor/jquery-3.6.0.min.js}"></script>
+  <script th:src="@{/assest/js/vendor/waypoints.min.js}"></script>
+  <script th:src="@{assest/js/bootstrap.bundle.min.js}"></script>
+  <script th:src="@{/assest/js/jquery.webui-popover.min.js}"></script>
+  <script th:src="@{/assest/js/slick.min.js}"></script>
+  <script th:src="@{/assest/js/swiper-bundle.min.js}"></script>
+  <script th:src="@{/assest/js/owl.carousel.min.js}"></script>
+  <script th:src="@{/assest/js/magnific-popup.min.js}"></script>
+  <script th:src="@{/assest/js/counterup.min.js}"></script>
+  <script th:src="@{/assest/js/backToTop.js}"></script>
+  <script th:src="@{/assest/js/wow.min.js}"></script>
+  <script th:src="@{/assest/js/main.js}"></script>
+  <script th:src="@{/assest/js/plugins.js}"></script>
+  <script th:src="@{/assest/js/functions.js}"></script>
+
+  <script>
+            $(document).ready(function () {
+                if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                    if ($(window).width() >= 840) {
+                        $("a.has-popover").webuiPopover({
+                            trigger: "hover",
+                            animation: "pop",
+                            placement: "horizontal",
+                            delay: {
+                                show: 500,
+                                hide: null,
+                            },
+                            width: 330,
+                        });
+                    } else {
+                        $("a.has-popover").webuiPopover({
+                            trigger: "hover",
+                            animation: "pop",
+                            placement: "vertical",
+                            delay: {
+                                show: 100,
+                                hide: null,
+                            },
+                            width: 335,
+                        });
+                    }
+                }
+
+                if ($(".course-carousel")[0]) {
+                    $(".course-carousel").slick({
+                        dots: false,
+                        infinite: false,
+                        speed: 300,
+                        slidesToShow: 4,
+                        slidesToScroll: 4,
+                        swipe: false,
+                        touchMove: false,
+                        responsive: [
+                            { breakpoint: 840, settings: { slidesToShow: 3, slidesToScroll: 3, }, },
+                            { breakpoint: 620, settings: { slidesToShow: 2, slidesToScroll: 2, }, },
+                            { breakpoint: 480, settings: { slidesToShow: 1, slidesToScroll: 1, }, },
+                        ],
+                    });
+                }
+
+                if ($(".top-istructor-slick")[0]) {
+                    $(".top-istructor-slick").slick({
+                        dots: false,
+                    });
+                }
+            });
+        </script>
+     </div>
+
+  </body>
+</html>

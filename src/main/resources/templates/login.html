@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<div th:replace="header :: header"></div>
+
+<div style="height:100px;"></div>
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-md-6">
+            <div class="card justify-content-center p-5">
+                <form class="form-signin" method="post" th:action="@{/login}">
+                    <h2 class="form-signin-heading">Please sign in</h2>
+                    <p>
+                        <label for="username" class="sr-only">Username</label>
+                        <input type="text" id="username" name="username" class="form-control" placeholder="Username" required="" autofocus="">
+                    </p>
+                    <p>
+                        <label for="password" class="sr-only">Password</label>
+                        <input type="password" id="password" name="password" class="form-control" placeholder="Password" required="">
+                    </p>
+                    <input name="_csrf" type="hidden" value="432dc310-1e91-4e42-9daa-299be0fa367b">
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                    <div class="row">
+                        <div class="col">Do you have an account? <span style="color:blue;">users are registered by Admins</span>
+<!--                            <a th:href="@{/user/register}">Register</a>-->
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+
+</div>
+<div style="height:100px;"></div>
+<div th:replace="footer :: footer"></div>
+<a target="_blank" href="https://api.whatsapp.com/send?phone=670533773&text=hello How can we be of help?" class="whatsapp-button">
+    <i class="fab fa-whatsapp fab-3x"></i></a>
+</body>
+</html>

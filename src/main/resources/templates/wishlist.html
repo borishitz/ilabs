@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<div th:replace="header :: header"></div>
+
+  <!-- hero-area-start -->
+  <section id="page-title">
+    <div class="container clearfix">
+      <h1>Wishlist</h1>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Wishlist</li>
+      </ol>
+    </div>
+  </section><!-- hero-area-end -->
+
+  <main>
+    <!-- Cart Area Strat-->
+    <div class="cart-area pt-100 pb-100">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <form action="#">
+              <div class="table-content table-responsive">
+                <table class="table">
+                  <thead>
+                  <tr>
+                    <th class="product-thumbnail">Images</th>
+                    <th class="cart-product-name">Product</th>
+                    <th class="product-price">Unit Price</th>
+                    <th class="product-quantity">Add to cart</th>
+                    <th class="product-subtotal">Total</th>
+                    <th class="product-remove">Remove</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td class="product-thumbnail"><a href="course-details.html"><img
+                            src="assest/images/shop/dress/1.jpg" alt=""></a></td>
+                    <td class="product-name"><a href="course-details.html">Best
+                      Inspirational</a></td>
+                    <td class="product-price"><span class="amount">$20.00</span></td>
+                    <td class="product-quantity">
+                      <a href="cart.html" class="edu-border-btn">Add to Cart</a>
+                    </td>
+                    <td class="product-subtotal"><span class="amount">$20.00</span></td>
+                    <td class="product-remove"><a href="#"><i class="icon-times"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td class="product-thumbnail"><a href="course-details.html"><img
+                            src="assest/images/shop/pants/1.jpg" alt=""></a></td>
+                    <td class="product-name"><a href="course-details.html">Wealth & Happiness
+                    </a></td>
+                    <td class="product-price"><span class="amount">$24.00</span></td>
+                    <td class="product-quantity">
+                      <a href="cart.html" class="edu-border-btn">Add to Cart</a>
+                    </td>
+                    <td class="product-subtotal"><span class="amount">$24.00</span></td>
+                    <td class="product-remove"><a href="#"><i class="icon-times"></i></a></td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Cart Area End-->
+  </main>
+
+  <div th:replace="footer :: footer"></div>
+<a target="_blank" href="https://api.whatsapp.com/send?phone=670533773&text=hello How can we be of help?" class="whatsapp-button">
+  <i class="fab fa-whatsapp fab-3x"></i></a>
+</body>
+  </html>

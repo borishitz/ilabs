@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<div th:replace="header :: header"></div>
+
+  <!-- hero-area-start -->
+  <section id="page-title">
+    <div class="container clearfix">
+      <h1>Student Application</h1>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Student Application</li>
+      </ol>
+    </div>
+  </section><!-- hero-area-end -->
+
+  <main>
+  <!-- sigin-area sart-->
+  <div class="signin-area5 pt-80 pb-80">
+    <div class="container">
+      <div class="row">
+        <div class="sign-up-wrapper">
+          <div class="contact-form">
+            <form th:action="@{/student/application/save}"
+                  th:object="${studentApply}"
+                  method="post"
+                  class="contact-form edustar-submit"
+                  data-nonce="edustar-submit-form-nonce"
+                  data-type="standard">
+              <div class="row">
+                <div class="col-12 form-group">
+                  <div class="mb-20">
+                    <input th:field="*{studentNames}" name="names" class="sm-form-control" placeholder="Student's Names" type="email" required>
+                  </div>
+                </div>
+                <div class="col-12 form-group">
+                  <div class="mb-20">
+                    <input th:field="*{telephoneNumber}" name="website" class="sm-form-control" placeholder="Tell" type="text" required>
+                  </div>
+                </div>
+                <div class="col-12 form-group">
+                  <div class="mb-20">
+                    <input th:field="*{idCard}" name="website" class="sm-form-control" placeholder="ID Card Number" type="text" required>
+                  </div>
+                </div>
+                <div class="col-12 form-group">
+                  <div class="mb-20">
+                    <input th:field="*{profession}" name="website" class="sm-form-control" placeholder="Profession" type="text" required>
+                  </div>
+                </div>
+                <div class="col-12 form-group">
+                  <div class="mb-20">
+                    <input th:field="*{residence}" name="website" class="sm-form-control" placeholder="Residence" type="text" required>
+                  </div>
+                </div>
+                <div class="col-12 form-group">
+                  <div class="mb-20">
+                    <input th:field="*{email}" name="website" class="sm-form-control" placeholder="Your Email" type="text" required>
+                  </div>
+                </div>
+                <div class="col-12 form-group">
+                  <div class="mb-20">
+                    <input th:field="*{guardianName}" name="website" class="sm-form-control" placeholder="Guardian's Name" type="text" required>
+                  </div>
+                </div>
+                <div class="col-12 form-group">
+                  <div class="mb-20">
+                    <input th:field="*{guardianPhoneNumber}" name="website" class="sm-form-control" placeholder="Guardian's Phone Number" type="text" required>
+                  </div>
+                </div>
+                <div class="col-12 form-group">
+                  <div class="mb-20">
+                    <input th:field="*{address}" name="website" class="sm-form-control" placeholder="Address" type="text" required>
+                  </div>
+                </div>
+                <div class="col-12 form-group">
+                  <div class="mb-20">
+                    <input th:field="*{sponsorName}" name="website" class="sm-form-control" placeholder="Sponsor's Name" type="text" required>
+                  </div>
+                </div>
+                <div class="col-12 form-group">
+                  <div class="mb-20">
+                    <input th:field="*{guardianResidence}" name="website" class="sm-form-control" placeholder="Guardian's Residence" type="text" required>
+                  </div>
+                </div>
+                <div class="col-12 form-group">
+                  <div class="mb-20">
+                    <input th:field="*{guardianAddress}" name="website" class="sm-form-control" placeholder="Guardian's Address" type="text" required>
+                  </div>
+                </div>
+                <div class="col-12 form-group">
+                  <button type="submit" class="button button-3d m-0">
+                    <span class="text">Submit Now</span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- sigin-area end-->
+</main>
+
+  <div th:replace="footer :: footer"></div></body>
+  </html>

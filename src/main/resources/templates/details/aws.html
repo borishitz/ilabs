@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<div th:replace="header :: header"></div>
+
+    <!-- hero-area-start -->
+    <section id="page-title">
+        <div class="container clearfix">
+            <h1>AWS Certified Cloud Practitioner</h1>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">aws</li>
+            </ol>
+        </div>
+    </section><!-- hero-area-end -->
+
+    <main>
+        <!-- contact-area-start -->
+        <div class="contact-area pt-120 pb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8 col-lg-7 col-md-12">
+                        <p> The AWS Certified Cloud Practitioner validates foundational, high-level understanding of AWS Cloud, services,
+                            and terminology. This is a good starting point on the AWS Certification journey for individuals with no prior
+                            IT or cloud experience switching to a cloud career or for line-of-business employees looking for foundational
+                            cloud literacy.
+                        </p>
+                        <ul>
+                            <li>
+                                <h4>Cloud Concepts:</h4>
+                                Taking the first steps as you start building on the cloud can seem overwhelming. Adjusting to a
+                                cloud-native approach can take time, especially if you are accustomed to the traditional on-premises
+                                way of provisioning hardware and building applications. Gaining familiarity with core concepts of
+                                cloud computing and the AWS Cloud will help give you confidence as you begin your cloud journey.
+                                In the following sections, we answer common questions about cloud computing and explore best practices
+                                for building on AWS. Define the AWS Cloud and its value proposition, Identify aspects of AWS Cloud economics.
+                                Be able to list the different cloud architecture design principles such as Reasonable Deployment,
+                                Business Continuity, Elastic Expansion, Performance Efficiency and Security Compliance.
+                            </li>
+                            <li>
+                               <h4>Cloud Concepts:</h4>
+                            </li>
+                        </ul>
+                        <p>Cloud security is a collection of procedures and technology designed to address external and internal
+                            threats to business security. Organizations need cloud security as they move toward their digital
+                            transformation strategy and incorporate cloud-based tools and services as part of their infrastructure. </p>
+                        <p>The AWS shared responsibility model is a concept of dividing responsibilities between AWS and a Customer.
+                            The Customer is you. AWS's responsibilities are the security of the cloud.</p>
+                        <p>Cloud security at AWS is the highest priority. AWS cloud allows customers to scale and innovate, while
+                            maintaining a secure environment. </p>
+                        <p>AWS Cloud Security and Compliance covers following aspects of AWS Security
+                        </p>
+
+                        <ul>
+                            <li>
+                                Infrastructure Security
+                            </li>
+                            <li>
+                                Infrastructure Resilience
+                            </li>
+                            <li>
+                                Data Encryption
+                            </li>
+                            <li>Monitoring and Logging</li>
+                            <li>
+                                Identity and Access Control
+                            </li>
+                            <li>
+                                Compliance Assurance Programs
+                            </li>
+                            <li>
+                                Security Support
+                            </li>
+                            <li>
+                                Standards and Best Practices
+                            </li>
+                            <li>
+                                Identify AWS access management capabilities
+                            </li>
+                            <li>
+                                Identity and Access Management (IAM): IAM is a web service that allows users to manage access to AWS resources. With IAM, users can create and manage users and groups, assign permissions and policies, and set up multi-factor authentication (MFA) to add an extra layer of security to their AWS accounts.
+                            </li>
+                            <li>
+                                AWS Single Sign-On (SSO): AWS SSO is a cloud-based service that makes it easy to manage access to multiple AWS accounts and business applications. With AWS SSO, users can centrally manage access to AWS accounts, as well as other third-party applications and services.
+                            </li>
+                            <li>
+                                AWS Organizations: AWS Organizations is a service that allows users to centrally manage and govern multiple AWS accounts. With AWS Organizations, users can create and manage accounts, apply policies and controls across accounts, and simplify billing and cost management.
+                            </li>
+                            <li>
+                                Resource-level permissions: AWS allows users to set granular permissions for specific AWS resources, such as EC2 instances or S3 buckets. This helps ensure that only authorized users can access and modify these resources.
+                            </li>
+                            <li>
+                                AWS Security Token Service (STS): STS is a web service that enables users to generate temporary security credentials that can be used to access AWS resources. These temporary credentials can be used by applications or users who need access to AWS resources for a short period of time, without requiring the use of long-term credentials.
+                            </li>
+                        </ul>
+                        <p>
+                            Overall, AWS provides a range of access management capabilities to help users secure their AWS
+                            resources and data, and ensure that only authorized users have access to sensitive information.
+                        <li><b>Identify resources for security support</b></li>
+
+                        <p>
+                            For security and operational health of your infrastructure, AWS Support provides:
+                        </p>
+                        <ul>
+                            <li>Real-time insight through AWS Trusted Advisor. Trusted Advisor helps provision your resources by
+                                following best practices. Trusted Advisor inspects your AWS environment and finds opportunities to
+                                save money, improve system performance and reliability, or help close security gaps.</li>
+                            <li>Proactive support and advocacy through Technical Account Manager (TAM). TAM is single point of
+                                contact and advocate who provides technical expertise across AWS services. </li>
+                            <li>
+                                <b>Technology</b>
+                                Define methods of deploying and operating in the AWS
+                                Cloud. Multiple options for provisioning your IT infrastructure and the deployment of your applications.
+                                The main principles to remember are AAA – Automate, Automate, and Automate.
+                            </li>
+                        </ul>
+
+                        <p>AWS Elastic Beanstalk</p>
+
+                        <ul>
+                            <li>It is a high-level deployment tool </li>
+                            <li>Helps you get an app from your desktop to the web in a matter of minutes.
+                            </li>
+                            <li>
+                                <p>handles the details of your hosting environment for
+                                </p>
+                                <ul>
+                                    <li>capacity provisioning</li>
+                                    <li>load balancing</li>
+                                    <li>scaling</li>
+                                    <li>application health monitoring</li>
+                                </ul>
+                            </li>
+                            <li>
+                                A platform configuration defines the infrastructure and software stack to be used for a given environment.
+                            </li>
+                            <li>When you deploy your app, Elastic Beanstalk provisions a set of AWS resources</li>
+                            <li>AWS resources can include Amazon EC2 instances, alarms, a load balancer, security groups, and more. </li>
+                        </ul>
+                        <h2>AWS CloudFormation</h2>
+                        <ul>
+                            <li>
+                                It is a service to model and set up your Amazon Web Services resources
+                            </li>
+                            <li>Spend less time managing those resources </li>
+                            <li>More time focusing on your applications that run in AWS. </li>
+                            <li>Create a template that describes all the AWS resources that you want (like Amazon EC2 instances or RDS)
+                            </li>
+                            <li>CloudFormation takes care of provisioning and configuring those resources for you. </li>
+                            <li>Use a simple text file to model and provision, in an automated and secure manner, all the resources needed for your applications across all regions and accounts. </li>
+                            <li>This file serves as the single source of truth for your cloud environment. </li>
+                            <li>Available at no additional charge, and you pay only for the AWS resources needed to run your applications.
+                            </li>
+                            <li></li>
+                        </ul>
+                        <h2>AWS CodeCommit</h2>
+                        <ul>
+                            <li>It is a fully-managed source control service </li>
+                            <li>Makes it easy for companies to host secure and highly scalable private Git repositories. </li>
+                            <li>It integrates with AWS CodePipeline and AWS CodeDeploy to streamline your development and release process.</li>
+                            <li>It is a secure, highly scalable, managed source control service that hosts private Git repositories. </li>
+                        </ul>
+                        <h2>AWS CodeDeploy</h2>
+                        <ul>
+                            <li>It is a service that automates code deployments and software deployments to any instance, including Amazon EC2
+                                instances and instances running on-premises.
+                            </li>
+                            <li>Makes it easier for you to rapidly release new features</li>
+                            <li>Helps you avoid downtime during application deployment
+                            </li>
+                            <li>Handles the complexity of updating your applications.</li>
+                        </ul>
+                        <h2>AWS CodePipeline</h2>
+                        <ul>
+                            <li>It is a continuous integration and continuous delivery service </li>
+                            <li>It is used for fast and reliable application and infrastructure updates. </li>
+                            <li>It builds, tests, and deploys your code every time there is a code change, based on the release process models you define. </li>
+                            <il>It automates the steps required to release your software changes continuously.
+                            </il>
+                        </ul>
+                        <h2>Amazon EC2 Container Service</h2>
+                        <ul>
+                            <li>It is a highly scalable, high performance container management service that supports Docker containers
+                            </li>
+                            <li>Allows you to easily run applications on a managed cluster of Amazon EC2 instances. </li>
+                            <li>Eliminates the need for you to install, operate, and scale your own cluster management infrastructure. </li>
+                        </ul>
+                        <h2>AWS OpsWorks</h2>
+                        <ul>
+                            <li>It is a configuration management service</li>
+                            <li>Helps you configure and operate applications in a cloud enterprise by using Chef. </li>
+                            <li>There are 2 variants: AWS OpsWorks Stacks and AWS OpsWorks for Chef Automate. </li>
+                            <li>Define the AWS global infrastructure</li>
+                        </ul>
+                        <p>The AWS Global Infrastructure gives you the flexibility of choosing how and where you want to run your workloads,
+                            and when you do you are using the same network, control plane, API's, and AWS services. If you would like to run
+                            your applications globally you can choose from any of the AWS Regions and AZs.
+                        </p>
+                        <ul>
+                            <li>Identify the core AWS services</li>
+                        </ul>
+                        <h2>EC2</h2>
+                        <p>Amazon Elastic Compute Cloud or Amazon EC2, is </p>
+                        <ul>
+                            <li>A web service that provides secure, resizable compute capacity in the cloud</li>
+                            <li>Designed to make web-scale cloud computing easier for developers.</li>
+                        </ul>
+                        <h2>S3
+                        </h2>
+                        <ul>
+                            <li>Amazon S3 is object storage </li>
+                            <li>Built to store and retrieve any amount of data from anywhere – web sites and mobile apps, corporate applications, and data from IoT sensors or devices. </li>
+                            <li>Can deliver 99.999999999% durability, </li>
+                            <li>Provides comprehensive security and compliance capabilities </li>
+                            <li>It has query-in-place functionality, allowing you to run powerful analytics directly on your data at rest in S3. </li>
+                        </ul>
+                        <h2>RDS
+                        </h2>
+                        <ul>
+                            <li>Amazon Relational Database Service (Amazon RDS) makes it easy to set up, operate, and scale a relational database in the cloud. </li>
+                            <li>Provides cost-efficient and resizable capacity </li>
+                            <li>Automates time-consuming administration tasks such as hardware provisioning, database setup, patching and backups.
+                            </li>
+                            <li>Available on several database instance types – optimized for memory, performance or I/O. </li>
+                            <li>Six familiar database engines to choose from. </li>
+                            <li>Supports encryption at rest and in transit, using keys managed through KMS.
+                            </li>
+                            <li>Backups are automated, user-initiated snapshots are available and database software is updated automatically. </li>
+                        </ul>
+                        <h2>Route 53</h2>
+                        <ul>
+                            <li>It is highly available and scalable cloud Domain Name System (DNS) web service</li>
+                            <li>It also offers Domain Name Registration </li>
+                            <li>It will automatically configure DNS settings for your domains.</li>
+                            <li>Used to configure DNS health checks to route traffic to healthy endpoints. </li>
+                            <li>Independently monitor the health of your application and its endpoints.
+                            </li>
+                            <li>Amazon Route 53 Traffic Flow makes it easy for you to manage traffic globally
+                            </li>
+                        </ul>
+                        <h2>SNS</h2>
+                        <p>Amazon Simple Notification Service (SNS) is </p>
+                        <ul>
+                            <li>A Pub/Sub messaging and mobile notifications for
+                            </li>
+                            <li>
+                                <ul>
+                                    <li>Microservices</li>
+                                    <li>distributed systems</li>
+                                    <li>serverless applications</li>
+                                </ul>
+                            </li>
+                            <li>It makes it simple and cost effective to send push notifications to iOS and Android based devices.</li>
+                            <li>Billing and Pricing</li>
+                        </ul>
+                        <p>The AWS Billing console contains features to pay your AWS bills and report your AWS cost and usage. You can also use the AWS Billing console to manage your consolidated billing if you're a part of AWS Organizations. Amazon Web Services automatically charges the credit card that you provided when you sign up for an AWS account. You can view or update your credit card information at any time, including designating a different credit card for AWS to charge.
+                        </p>
+                        <ul>
+                            <li>
+                                <b>Recognize the various account structures in relation to
+                                    AWS billing and pricing
+                                </b>
+                            </li>
+                            <li>Accounts are the main billing entity for AWS Resources.
+                            </li>
+                            <li>Different billing options are available including invoicing </li>
+                            <li>Consolidated billing, lets one account pick up the bill for multiple ‘sub accounts’. </li>
+                            <li>billing alerts can be set up</li>
+                            <li>AWS Budgets and automated bill reporting provided for better insights.</li>
+                            <li>Tagging can also be used for better cost allocation.
+                            </li>
+                            <li>
+                                <b>Identify resources available for billing support</b>
+                            </li>
+                            <li>AWS Knowledge Center gives answers to questions about your bill.
+                            </li>
+                            <li>Customers have access to account and billing support free of charge. </li>
+                            <li>Personalized technical support requires a support plan.
+                            </li>
+                            <li>Use AWS Cost Calculator to estimate monthly bill. </li>
+                            <li>Trusted Advisor helps with reducing costs, by suggesting changes to your existing infrastructure. </li>
+                        </ul>
+                        <p>Note, AWS Certified Cloud Practitioner is a beneficial certification for cloud professionals irrespective for
+                            their technical skills and job roles to deal with cloud operations and make price-related decisions.
+                            AWS Certification solidifies AWS services and the details of how designs are made to help a business.</p>
+                        <p>Holding an AWS certification, even at the foundational level, can enhance your resume and validate your
+                            skills. Career Opportunities: As cloud technology continues to gain prominence, the demand for professionals
+                            with cloud expertise is on the rise.
+                        </p>
+                        <p>Remember that becoming a Cloud Practitioner in AWS requires practice and hands-on experience. As you progress
+                            in your learning journey, we at bitsvalleyilabs will engage you on real world projects to apply your knowledge
+                            and enhance your skills
+                        </p>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-md-8">
+                        <div class="sidebar-widget-wrapper">
+                            <div class="support-contact mb-30">
+                                <div class="support-tittle">
+                                    <h4>Support Contact</h4>
+                                </div>
+                                <div class="support-contact-inner">
+                                    <div class="support-item">
+                                        <div class="support-icon">
+                                            <svg id="Layer_6" data-name="Layer 3" xmlns="http://www.w3.org/2000/svg" width="21.375"
+                                                 height="21.375" viewBox="0 0 21.375 21.375">
+                                                <path id="Path_8" data-name="Path 8"
+                                                      d="M1.688,16.386c.038-.031,4.3-3.085,5.463-2.885.556.1.875.477,1.513,1.238.1.123.35.415.541.624a8.877,8.877,0,0,0,1.176-.479,9.761,9.761,0,0,0,4.5-4.5A8.876,8.876,0,0,0,15.363,9.2c-.209-.192-.5-.439-.628-.544-.756-.634-1.135-.953-1.233-1.51C13.3,6,16.354,1.725,16.386,1.687A1.631,1.631,0,0,1,17.6,1c1.238,0,4.774,4.586,4.774,5.359,0,.045-.065,4.608-5.691,10.331C10.966,22.31,6.4,22.375,6.359,22.375,5.586,22.375,1,18.84,1,17.6A1.629,1.629,0,0,1,1.688,16.386Zm4.75,4.56c.623-.051,4.452-.556,9.239-5.26,4.727-4.813,5.22-8.653,5.269-9.248a19.276,19.276,0,0,0-3.353-3.962c-.028.029-.066.071-.115.127a25.216,25.216,0,0,0-2.546,4.32,8.469,8.469,0,0,0,.724.649,7.149,7.149,0,0,1,1.077,1.013l.173.242-.051.293A8.135,8.135,0,0,1,16.166,11,11.193,11.193,0,0,1,11,16.166a8.115,8.115,0,0,1-1.882.688l-.293.051-.242-.173A7.209,7.209,0,0,1,7.568,15.65c-.223-.266-.522-.622-.634-.722A25.054,25.054,0,0,0,2.6,17.477c-.059.05-.1.088-.128.113a19.259,19.259,0,0,0,3.962,3.354Z"
+                                                      transform="translate(-1 -1)" fill="#2467ec" />
+                                            </svg>
+                                        </div>
+                                        <div class="support-info-phone">
+                                            <span>Phone</span>
+                                            <p>Mobile :<a href="tel:(+237)670-533-773"> (+237) 670-533-773</a></p>
+                                            <p>Mobile :<a href="tel:(+237) 677-825-266"> (+237) 677-825-266</a></p>
+                                            <p>Mobile :<a href="tel:(+237) 681-495-379"> (+237) 681-495-379</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="support-item">
+                                        <div class="support-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22.57" height="16.271"
+                                                viewBox="0 0 22.57 16.271">
+                                                <g id="email_3_" data-name="email (3)" transform="translate(-1.25 -4.25)">
+                                                    <path id="Path_10" data-name="Path 10"
+                                                          d="M20.933,20.521H4.137A2.9,2.9,0,0,1,1.25,17.634V7.137A2.9,2.9,0,0,1,4.137,4.25h16.8A2.9,2.9,0,0,1,23.82,7.137v10.5A2.9,2.9,0,0,1,20.933,20.521Zm-16.8-14.7A1.312,1.312,0,0,0,2.825,7.137v10.5a1.312,1.312,0,0,0,1.312,1.312h16.8a1.312,1.312,0,0,0,1.312-1.312V7.137a1.312,1.312,0,0,0-1.312-1.312Z"
+                                                          transform="translate(0 0)" fill="#2467ec" />
+                                                    <path id="Path_11" data-name="Path 11"
+                                                          d="M12.534,13.7a3.412,3.412,0,0,1-1.732-.472L1.638,7.778a.8.8,0,0,1-.283-1.05A.777.777,0,0,1,2.4,6.455l9.175,5.438a1.774,1.774,0,0,0,1.848,0L22.6,6.455a.777.777,0,0,1,1.05.273.8.8,0,0,1-.283,1.05l-9.1,5.448a3.412,3.412,0,0,1-1.732.472Z"
+                                                          transform="translate(0.001 0.105)" fill="#2467ec" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="support-info-email">
+                                            <span>Email</span>
+                                            <a href="mailto:Info@example.com">support@bitsvalley.com</a>
+                                            <a href="mailto:Contact@example.com">Contact@bitsvalley.com</a>
+                                        </div>
+                                    </div>
+                                    <div class="support-item">
+                                        <div class="support-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="17.41" height="21.729"
+                                                 viewBox="0 0 17.41 21.729">
+                                                <g id="pin" transform="translate(-50.885)">
+                                                    <g id="Group_2184" data-name="Group 2184" transform="translate(55.556 4.671)">
+                                                        <g id="Group_2183" data-name="Group 2183">
+                                                            <path id="Path_3602" data-name="Path 3602"
+                                                                  d="M164.981,110.062a4.034,4.034,0,1,0,4.034,4.034A4.039,4.039,0,0,0,164.981,110.062Zm0,6.369a2.335,2.335,0,1,1,2.335-2.335A2.338,2.338,0,0,1,164.981,116.431Z"
+                                                                  transform="translate(-160.947 -110.062)" fill="#2467ec" />
+                                                        </g>
+                                                    </g>
+                                                    <g id="Group_2186" data-name="Group 2186" transform="translate(50.885)">
+                                                        <g id="Group_2185" data-name="Group 2185">
+                                                            <path id="Path_3603" data-name="Path 3603"
+                                                                  d="M59.59,0a8.715,8.715,0,0,0-8.7,8.7v.241c0,2.428,1.392,5.256,4.137,8.408A35.783,35.783,0,0,0,59.056,21.3l.534.431.534-.431a35.775,35.775,0,0,0,4.035-3.944c2.745-3.151,4.137-5.98,4.137-8.408V8.705A8.715,8.715,0,0,0,59.59,0ZM66.6,8.946c0,4.1-5.286,9.068-7.006,10.576-1.721-1.508-7.006-6.474-7.006-10.576V8.705a7.006,7.006,0,0,1,14.013,0Z"
+                                                                  transform="translate(-50.885)" fill="#2467ec" />
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="support-info-location">
+                                            <span> Location</span>
+                                            <a href="#">Lachance Bridge, City Chemist<br></a>
+                                            <a href="#">Rue Alfred Saker Akwa<br>
+                                                USA-5785</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div th:replace="footer :: footer"></div>
+<a target="_blank" href="https://api.whatsapp.com/send?phone=670533773&text=hello How can we be of help?" class="whatsapp-button">
+    <i class="fab fa-whatsapp fab-3x"></i></a>
+</body>
+</html>

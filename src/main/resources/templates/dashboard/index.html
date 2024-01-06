@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<div th:replace="dash-header :: dash-header"></div>
+
+<div class="row">
+    <div th:replace="dash-menu :: dash-menu"></div>
+
+    <div class="col-10">
+       <div class="content">
+
+<!--           start of table section -->
+           <h3>Contact Entries</h3>
+           <table id="customers">
+               <tr>
+                   <th>Names</th>
+                   <th>Email</th>
+                   <th>Phone</th>
+                   <th>Options</th>
+               </tr>
+               <tr th:each="contact : ${contacts}">
+                   <td th:text="${contact.name}"></td>
+                   <td th:text="${contact.email}"></td>
+                   <td th:text="${contact.Phone}"></td>
+                   <td> <a class="btn btn-sm btn-primary" th:href="@{'/contact/detail/' + ${contact.id}}"><i style="color:white;" class="fas fa-tasks"></i>Detail</a></td>
+               </tr>
+
+           </table>
+<!--           end of table section -->
+       </div>
+    </div>
+
+</div>
+
+<div th:replace="dash-footer :: dash-footer"></div>
+
+</body>
+</html>
