@@ -1,9 +1,11 @@
 package com.tracker.recordSearch.domain;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Entity
 public class Course {
 
     @Id
@@ -44,13 +46,16 @@ public class Course {
         return level;
     }
 
+
     public void setLevel(String level) {
         this.level = level;
     }
 
+
     public String getDescription() {
         return description;
     }
+
 
     public void setDescription(String description) {
         this.description = description;
