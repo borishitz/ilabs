@@ -23,7 +23,7 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/login","/css/*", "/js/register.js","/font/css/all.css", "/js/jquery.js",
                                         "/resources/**","/user/registration","/user/register","/fonts/**", "/details/**", "/img/**",
-                                        "/about","/","/contact","/blog","/course","/event","/application","/course/details","/event","event/details","/404","/become/instructor",
+                                        "/about","/","/contact","/blog","/courses/all","/course","/event","/application","/course/details","/event","event/details","/404","/become/instructor",
                                         "/cart","/checkout","/faq/details","/faq/page","/instructor","/instructor/profile","/shop","/shop/details","/wishlist",
                                         "/student/application/new","/student/application","/contact","/contact-success","/contact/save","/flyer/details/save","/flyer/details/new","/flyer/details/success",
                                         "/src/main/resources/static/assest/flyerDocs").permitAll()

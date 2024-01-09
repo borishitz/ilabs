@@ -126,11 +126,11 @@
                                    <span class="category-color category-color-1"><a th:text="${course.courseName}"
                                            th:href="@{/details/frontend}">Frontend Web Development</a></span>
                                             <a th:href="@{/details/frontend}">
-                                                <h3>Frontend Web-Development with HTML, CSS, JAVASCRIPT</h3>
+                                                <h3 th:text="${course.description}">Frontend Web-Development with HTML, CSS, JAVASCRIPT</h3>
                                             </a>
                                             <div class="cart-lavel">
                                                 <h5>Level : <span>Beginner To Advance</span></h5>
-                                                <p>Knowledge is power. Information is liberating. Education is the premise of
+                                                <p th:text="${course.description}">Knowledge is power. Information is liberating. Education is the premise of
                                                     progress, in every society, in every family</p>
                                             </div>
                                             <div class="info-cart-text">
