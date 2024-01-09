@@ -16,5 +16,9 @@ public class CourseSer {
         return courseRepo.findAll();
     }
 
+    public Course saveCourse(Course course){
+        return courseRepo.save(course);
+    }
+
 
 }
