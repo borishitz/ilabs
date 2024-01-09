@@ -24,10 +24,18 @@ public class CourseCon {
         return "course";
     }
 
+    @GetMapping("/course/add")
+    public String addCourse(Model model){
+        Course course = new Course();
+        model.addAttribute("course", course);
+//        model.addAttribute("courseList", courseSer.getAllCourses());
+        return "addCourses";
+    }
+
     @PostMapping("/course/save")
     public String saveCourse(Course course) {
         courseSer.saveCourse(course);
-        return "redirect:/courseS/all";
+        return "redirect:/courses/all";
     }
 
 }
