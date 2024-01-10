@@ -17,11 +17,18 @@ public class CourseCon {
     private  CourseSer courseSer;
 
     @GetMapping("/courses/all")
-    public String getAllStudents(Model model){
+    public String getAllCourses(Model model){
         List<Course> courseList = courseSer.getAllCourses();
 //        courseList = keyword == null? courseSer.getAllCourses(): courseSer.findByKeyword(keyword);
         model.addAttribute("courseList",  courseList);
         return "course";
+    }
+
+    @GetMapping("/courses/list")
+    public String getAllStudents(Model model){
+        List<Course> courseList = courseSer.getAllCourses();
+        model.addAttribute("courseList",  courseList);
+        return "dashboard/courses-list";
     }
 
     @GetMapping("/course/add")

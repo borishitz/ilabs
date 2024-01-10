@@ -1,287 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<h1 id="head">This Is the html Version</h1>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<div th:replace="dash-header :: dash-header"></div>
 
-<script src="js/script.js"></script>
+<div class="row">
+    <div th:replace="dash-menu :: dash-menu"></div>
+
+    <div class="col-10">
+        <div class="content">
+
+            <!--           start of table section -->
+            <h3>Contact Entries</h3>
+            <table id="customers">
+                <tr>
+                    <th>Names</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Options</th>
+                </tr>
+                <tr th:each="course : ${courseDashBoardList}">
+                    <td th:text="${course.name}"></td>
+                    <td th:text="${course.email}"></td>
+                    <td th:text="${course.Phone}"></td>
+                    <td> <a class="btn btn-sm btn-primary" th:href="@{'/course/detail/' + ${course.id}}"><i style="color:white;" class="fas fa-tasks"></i>Detail</a></td>
+                </tr>
+
+            </table>
+            <!--           end of table section -->
+        </div>
+    </div>
+
+</div>
+
+<div th:replace="dash-footer :: dash-footer"></div>
+
 </body>
 </html>
-
-
-
-
-<!--<!DOCTYPE html>-->
-<!--<html dir="ltr" lang="en" xmlns:th="http://www.w3.org/1999/xhtml">-->
-
-<!--<head>-->
-<!--    <meta charset="utf-8">-->
-<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
-<!--    &lt;!&ndash; Tell the browser to be responsive to screen width &ndash;&gt;-->
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
-<!--    <meta name="keywords"-->
-<!--          content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Flexy lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Flexy admin lite design, Flexy admin lite dashboard bootstrap 5 dashboard template">-->
-<!--    <meta name="description"-->
-<!--          content="Flexy Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">-->
-<!--    <meta name="robots" content="noindex,nofollow">-->
-<!--    <title>Flexy Admin Lite Template by WrapPixel</title>-->
-<!--    <link rel="canonical" href="https://www.wrappixel.com/templates/Flexy-admin-lite/" />-->
-<!--    &lt;!&ndash; Favicon icon &ndash;&gt;-->
-<!--    <link rel="icon" type="image/png" sizes="16x16" th:href="@{/assets1/images/favicon.png}">-->
-<!--    &lt;!&ndash; Custom CSS &ndash;&gt;-->
-<!--    <link th:href="@{/assets1/libs/chartist/dist/chartist.min.css}" rel="stylesheet}">-->
-<!--    <link th:href="@{/assets1/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css}" rel="stylesheet">-->
-<!--    &lt;!&ndash; Custom CSS &ndash;&gt;-->
-<!--    <link th:href="@{/dist/css/style.min.css}" rel="stylesheet">-->
-<!--    &lt;!&ndash; HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries &ndash;&gt;-->
-<!--    &lt;!&ndash; WARNING: Respond.js doesn't work if you view the page via file:// &ndash;&gt;-->
-<!--    &lt;!&ndash;[if lt IE 9]>-->
-<!--    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>-->
-<!--    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
-<!--    <![endif]&ndash;&gt;-->
-<!--</head>-->
-
-<!--<body>-->
-<!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--&lt;!&ndash; Preloader - style you can find in spinners.css &ndash;&gt;-->
-<!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--<div class="preloader">-->
-<!--    <div class="lds-ripple">-->
-<!--        <div class="lds-pos"></div>-->
-<!--        <div class="lds-pos"></div>-->
-<!--    </div>-->
-<!--</div>-->
-<!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--&lt;!&ndash; Main wrapper - style you can find in pages.scss &ndash;&gt;-->
-<!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--<div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"-->
-<!--     data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">-->
-<!--    &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--    &lt;!&ndash; Topbar header - style you can find in pages.scss &ndash;&gt;-->
-<!--    &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--    <header class="topbar" data-navbarbg="skin6">-->
-<!--        <nav class="navbar top-navbar navbar-expand-md navbar-light">-->
-<!--            <div class="navbar-header" data-logobg="skin6">-->
-<!--                &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--                &lt;!&ndash; Logo &ndash;&gt;-->
-<!--                &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--                <a class="navbar-brand" href="index.html">-->
-<!--                    &lt;!&ndash; Logo icon &ndash;&gt;-->
-<!--                    <b class="logo-icon">-->
-<!--                        &lt;!&ndash;You can put here icon as well // <i class="wi wi-sunset"></i> //&ndash;&gt;-->
-<!--                        &lt;!&ndash; Dark Logo icon &ndash;&gt;-->
-<!--                        <img th:src="@{/assets1/images/logo-icon.png}" alt="homepage" class="dark-logo" />-->
-<!--                        &lt;!&ndash; Light Logo icon &ndash;&gt;-->
-<!--                        <img th:src="@{/assets1/images/logo-light-icon.png}" alt="homepage" class="light-logo" />-->
-<!--                    </b>-->
-<!--                    &lt;!&ndash;End Logo icon &ndash;&gt;-->
-<!--                    &lt;!&ndash; Logo text &ndash;&gt;-->
-<!--                    <span class="logo-text">-->
-<!--                            &lt;!&ndash; dark Logo text &ndash;&gt;-->
-<!--                            <img src="/assets1/images/logo-text.png" alt="homepage" class="dark-logo" />-->
-<!--                        &lt;!&ndash; Light Logo text &ndash;&gt;-->
-<!--                            <img src="/assets1/images/logo-light-text.png" class="light-logo" alt="homepage" />-->
-<!--                        </span>-->
-<!--                </a>-->
-<!--                &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--                &lt;!&ndash; End Logo &ndash;&gt;-->
-<!--                &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--                &lt;!&ndash; This is for the sidebar toggle which is visible on mobile only &ndash;&gt;-->
-<!--                <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i-->
-<!--                        class="mdi mdi-menu"></i></a>-->
-<!--            </div>-->
-<!--            &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--            &lt;!&ndash; End Logo &ndash;&gt;-->
-<!--            &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--            <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">-->
-<!--                &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--                &lt;!&ndash; toggle and nav items &ndash;&gt;-->
-<!--                &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--                <ul class="navbar-nav float-start me-auto">-->
-<!--                    &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--                    &lt;!&ndash; Search &ndash;&gt;-->
-<!--                    &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--                    <li class="nav-item search-box"> <a class="nav-link waves-effect waves-dark"-->
-<!--                                                        href="javascript:void(0)"><i class="mdi mdi-magnify me-1"></i> <span class="font-16">Search</span></a>-->
-<!--                        <form class="app-search position-absolute">-->
-<!--                            <input type="text" class="form-control" placeholder="Search &amp; enter"> <a-->
-<!--                                class="srh-btn"><i class="mdi mdi-window-close"></i></a>-->
-<!--                        </form>-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!--                &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--                &lt;!&ndash; Right side toggle and nav items &ndash;&gt;-->
-<!--                &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--                <ul class="navbar-nav float-end">-->
-<!--                    &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--                    &lt;!&ndash; User profile and search &ndash;&gt;-->
-<!--                    &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--                    <li class="nav-item dropdown">-->
-<!--                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
-<!--                            <img th:src="@{/assets1/images/users/profile.png}" alt="user" class="rounded-circle" width="31">-->
-<!--                        </a>-->
-<!--                        <ul class="dropdown-menu dropdown-menu-end user-dd animated" aria-labelledby="navbarDropdown">-->
-<!--                            <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i>-->
-<!--                                My Profile</a>-->
-<!--                            <a class="dropdown-item" href="javascript:void(0)"><i class="ti-wallet m-r-5 m-l-5"></i>-->
-<!--                                My Balance</a>-->
-<!--                            <a class="dropdown-item" href="javascript:void(0)"><i class="ti-email m-r-5 m-l-5"></i>-->
-<!--                                Inbox</a>-->
-<!--                        </ul>-->
-<!--                    </li>-->
-<!--                    &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--                    &lt;!&ndash; User profile and search &ndash;&gt;-->
-<!--                    &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--                </ul>-->
-<!--            </div>-->
-<!--        </nav>-->
-<!--    </header>-->
-<!--    &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--    &lt;!&ndash; End Topbar header &ndash;&gt;-->
-<!--    &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--    <div th:insert="sideBar :: sideBar"></div>-->
-<!--    &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--    &lt;!&ndash; Page wrapper  &ndash;&gt;-->
-<!--    &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--    <div class="page-wrapper">-->
-<!--        &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--        &lt;!&ndash; Bread crumb and right sidebar toggle &ndash;&gt;-->
-<!--        &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--        <div class="page-breadcrumb">-->
-<!--            <div class="row align-items-center">-->
-<!--                <div class="col-6">-->
-<!--                    <nav aria-label="breadcrumb">-->
-<!--                        <ol class="breadcrumb mb-0 d-flex align-items-center">-->
-<!--                            <li class="breadcrumb-item"><a th:href="@{/home}" class="link"><i class="mdi mdi-home-outline fs-4"></i></a></li>-->
-<!--                            <li class="breadcrumb-item active" aria-current="page">Dashboard</li>-->
-<!--                        </ol>-->
-<!--                    </nav>-->
-<!--                    <h1 class="mb-0 fw-bold">Dashboard</h1>-->
-<!--                </div>-->
-<!--                <div class="col-6">-->
-<!--                    <div class="text-end upgrade-btn">-->
-<!--                        <a href="https://www.wrappixel.com/templates/flexy-bootstrap-admin-template/" class="btn btn-primary text-white"-->
-<!--                           target="_blank">Upgrade to Pro</a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--        &lt;!&ndash; End Bread crumb and right sidebar toggle &ndash;&gt;-->
-<!--        &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--        &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--        &lt;!&ndash; Container fluid  &ndash;&gt;-->
-<!--        &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--        <div class="container-fluid">-->
-<!--            &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--            &lt;!&ndash; Table &ndash;&gt;-->
-<!--            &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--            <div class="row">-->
-<!--                &lt;!&ndash; column &ndash;&gt;-->
-<!--                <div class="col-12">-->
-<!--                    <div class="card">-->
-<!--                        <div class="card-body">-->
-<!--                            &lt;!&ndash; title &ndash;&gt;-->
-<!--                            <div class="d-md-flex">-->
-<!--                                <div>-->
-<!--                                    <h4 class="card-title">Contact List</h4>-->
-<!--                                    <h5 class="card-subtitle">Contact information</h5>-->
-<!--                                </div>-->
-<!--                                <div class="ms-auto">-->
-<!--                                    <div class="dl">-->
-<!--                                        <select class="form-select shadow-none">-->
-<!--                                            <option value="0" selected>Monthly</option>-->
-<!--                                            <option value="1">Daily</option>-->
-<!--                                            <option value="2">Weekly</option>-->
-<!--                                            <option value="3">Yearly</option>-->
-<!--                                        </select>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            &lt;!&ndash; title &ndash;&gt;-->
-<!--                            <div class="table-responsive">-->
-<!--                                <table class="table mb-0 table-hover align-middle text-nowrap">-->
-<!--                                    <thead>-->
-<!--                                    <tr>-->
-<!--                                        <th class="border-top-0">Name</th>-->
-<!--                                        <th class="border-top-0">Phone number</th>-->
-<!--                                        <th class="border-top-0">Email address</th>-->
-<!--                                        <th class="border-top-0">Website URL</th>-->
-<!--                                        <th class="border-top-0">Notes</th>-->
-<!--                                        &lt;!&ndash;                                                <th class="border-top-0">Address</th>&ndash;&gt;-->
-<!--                                        &lt;!&ndash;                                                <th class="border-top-0">Earnings</th>&ndash;&gt;-->
-<!--                                    </tr>-->
-<!--                                    </thead>-->
-<!--                                    <tbody>-->
-<!--                                    <tr th:each="contact: ${contacts}">-->
-<!--                                        <td>-->
-<!--                                            <div class="d-flex align-items-center">-->
-<!--                                                <div class="">-->
-<!--                                                    <h4 class="m-b-0 font-16" th:text="${contact.name}">Elite Admin</h4>-->
-<!--                                                </div>-->
-<!--                                            </div>-->
-<!--                                        </td>-->
-<!--                                        <td th:text="${contact.phone}">John Doe</td>-->
-<!--                                        <td>-->
-<!--                                            <label class="badge bg-danger" th:text="${contact.email}">Angular</label>-->
-<!--                                        </td>-->
-<!--                                        <td th:text="${contact.webSiteUrl}">46</td>-->
-<!--                                        <td th:text="${contact.details}">46</td>-->
-<!--                                    </tr>-->
-<!--                                    </tbody>-->
-<!--                                </table>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--            &lt;!&ndash; Table &ndash;&gt;-->
-<!--            &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--        </div>-->
-<!--        &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--        &lt;!&ndash; End Container fluid  &ndash;&gt;-->
-<!--        &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--        &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--        &lt;!&ndash; footer &ndash;&gt;-->
-<!--        &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--        <footer class="footer text-center">-->
-<!--            All Rights Reserved by Flexy Admin. Designed and Developed by <a-->
-<!--                href="https://www.wrappixel.com">WrapPixel</a>.-->
-<!--        </footer>-->
-<!--        &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--        &lt;!&ndash; End footer &ndash;&gt;-->
-<!--        &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--    </div>-->
-<!--    &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--    &lt;!&ndash; End Page wrapper  &ndash;&gt;-->
-<!--    &lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--</div>-->
-<!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--&lt;!&ndash; End Wrapper &ndash;&gt;-->
-<!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--&lt;!&ndash; All Jquery &ndash;&gt;-->
-<!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
-<!--<script th:src="@{/assets1/libs/jquery/dist/jquery.min.js}"></script>-->
-<!--&lt;!&ndash; Bootstrap tether Core JavaScript &ndash;&gt;-->
-<!--<script th:src="@{/assets1/libs/bootstrap/dist/js/bootstrap.bundle.min.js}"></script>-->
-<!--<script th:src="@{/dist/js/app-style-switcher.js}"></script>-->
-<!--&lt;!&ndash;Wave Effects &ndash;&gt;-->
-<!--<script th:src="@{/dist/js/waves.js}"></script>-->
-<!--&lt;!&ndash;Menu sidebar &ndash;&gt;-->
-<!--<script th:src="@{/dist/js/sidebarmenu.js}"></script>-->
-<!--&lt;!&ndash;Custom JavaScript &ndash;&gt;-->
-<!--<script th:src="@{/dist/js/custom.js}"></script>-->
-<!--&lt;!&ndash;This page JavaScript &ndash;&gt;-->
-<!--&lt;!&ndash;chartis chart&ndash;&gt;-->
-<!--<script th:src="@{/assets1/libs/chartist/dist/chartist.min.js}"></script>-->
-<!--<script th:src="@{/assets1/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js}"></script>-->
-<!--<script th:src="@{/dist/js/pages/dashboards/dashboard1.js}"></script>-->
-<!--</body>-->
-<!--</html>-->
