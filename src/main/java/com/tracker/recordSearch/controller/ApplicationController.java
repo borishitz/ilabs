@@ -43,6 +43,7 @@ public class ApplicationController {
             Locale locale = new Locale(language);
             System.out.println(language + ": " + locale.getDisplayLanguage());
         }
+
         return "home";
     }
 
